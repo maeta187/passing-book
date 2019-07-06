@@ -3,31 +3,36 @@ h1, h2 {
 }
 
 .text-white {
-  color: #fff;
+  color: white;
 }
 
 .btn-white {
-  color: #fff;
-  border: 1px solid #fff;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 20px;
-  background-color: rgba(0,0,0,0.0);
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
 
   &:hover {
-    color: #fff;
+    background: #2ecc71;
   }
 }
 
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
-  background: image-url('sky.jpg');
+  // background: image-url('sky.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
+  background-color: #191919;
 }
 
 .top-hero-container {
@@ -44,17 +49,40 @@ h1, h2 {
 // サインイン
 .form-control {
   height: 45px;
+  background: #191919;
+  text-align: center;
+  border: 0;
+  background: none;
+  display: block;
+  margin: 28px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  
+  &:hover{
+    width: 280px;
+    border-color: #2ecc71;
+  }
+
+  &::placeholder{
+    color: darkgray;
+  }
 }
 
 .users-new-wrapper {
   width: 100vw;
   height: 100vh;
-  background-image: image-url('sky.jpg');
+  // background-image: image-url('sky.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
+  background-color: #191919;
 
   .users-new-container {
     padding-top: 220px;
