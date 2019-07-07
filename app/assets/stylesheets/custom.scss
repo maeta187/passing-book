@@ -57,15 +57,14 @@ h1, h2 {
   margin: 28px auto;
   text-align: center;
   border: 2px solid #3498db;
-  padding: 14px 10px;
-  width: 200px;
+  width: 250px;
   outline: none;
   color: white;
   border-radius: 24px;
   transition: 0.25s;
   
-  &:hover{
-    width: 280px;
+  &:focus{
+    width: 350px;
     border-color: #2ecc71;
   }
 
@@ -91,4 +90,11 @@ h1, h2 {
       margin-bottom: 20px;
     }
   }
+}
+
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
 }
