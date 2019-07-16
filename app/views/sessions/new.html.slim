@@ -1,0 +1,15 @@
+.users-new-wrapper
+  .container
+    .row
+      .col-md-offset-4.col-md-4.users-new-container
+      .col-md-offset-4.col-md-4
+        h1.text-center.text-white
+          | Log in
+        = form_for :session, url: login_path do |f|
+          .form-group 
+            = f.label :email, class: "text-white"
+            = f.text_field :email, class: "form-control" , placeholder: "Email"
+          .form-group
+            = f.label :password, class: "text-white"
+            = f.password_field :password, class: "form-control" , placeholder: "Password"
+          = f.submit "Login", class: "btn-block btn-white"

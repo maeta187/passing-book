@@ -1,0 +1,11 @@
+.top-jumbotron-wrapper.text-center
+  .container.top-jumbotron-container
+    h1.text-white
+      | Welcome
+    h2.text-white
+    .row
+      .col-md-offset-3.col-md-3.users-new-container
+      .col-md-offset-3.col-md-3
+        = link_to 'Sign up', new_user_path, class: 'btn btn-block btn-white '
+      .col-md-3
+        = link_to 'Log in', login_path,class: 'btn btn-block btn-white'
