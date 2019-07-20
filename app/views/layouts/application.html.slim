@@ -18,18 +18,17 @@ html
           = image_tag "icons/emblemmatic-p-b-logo-148.png", class: "navbar-brand "
         #navbarToggler.navbar-collapse.collapse[style=""]
           ul.navbar-nav.mt-2.mt-md-0.ml-auto
-            / -if logged_in?
-            li.nav-item
-              =link_to 'Menu1',root_path , class: "nav-link"
-            li.nva-item
-              =link_to 'Log In',login_path , class: "nav-link"
-            li.nva-item
-              =link_to 'Log Out',logout_path, class: "nav-link", method: :delete 
-            / -else
-            / li.nav-item
-            /   =link_to 'Menu1',root_path , class: "nav-link"
-            / li.nva-item
-            /   =link_to 'Log In',login_path , class: "nav-link"
+            / = logged_in?
+            -if logged_in?
+              li.nav-item
+                =link_to 'Book',new_book_path , class: "nav-link"
+              / li.nva-item
+              /   =link_to 'Log In',login_path , class: "nav-link"
+              li.nva-item
+                =link_to 'Log Out',logout_path, class: "nav-link", method: :delete 
+            -else
+              li.nva-item
+                =link_to 'Log In',login_path , class: "nav-link"
             / li.nva-item
             /   =link_to 'Log Out',logout_path, class: "nav-link", method: :delete 
 
@@ -43,7 +42,7 @@ html
 
     = yield
     script
-        |  $(function () { $(".alert").fadeOut(5000); }); 
+        |  $(function () { $(".alert").fadeOut(3000); }); 
   / footer.navbar.navbar-expand-xl.fixed-bottom.navbar-transparent
   /   small
   /     | (C)2019 pict-studio. 

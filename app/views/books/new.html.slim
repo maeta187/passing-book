@@ -1,0 +1,16 @@
+.users-new-wrapper
+  .container
+    .row
+      .col-md-offset-4.col-md-4.users-new-container
+      .col-md-offset-4.col-md-4
+        h1.text-center.text-white
+          | Save URL
+          = form_for @book do |f|
+            / div class="form-group"
+            /   = f.label :image
+            /   = f.file_field :image
+            div class="form-group"
+              = f.text_area :title, class: 'form-control'
+              = f.text_area :url, class: 'form-control'
+              = f.text_area :description, class: 'form-control'
+            = f.submit 'Save', class: 'btn-white'
