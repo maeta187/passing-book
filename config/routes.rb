@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'books/new'
+  get 'bookmarks/new'
+  get 'urls/new'
   get 'sessions/new'
   root 'pages#index'
   get 'pages/help'
@@ -9,6 +10,6 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   resources :users
-  resources :books
+  resources :bookmarks
 
 end

@@ -20,7 +20,7 @@ html
           ul.navbar-nav.mt-2.mt-md-0.ml-auto
             -if logged_in?
               li.nav-item
-                =link_to 'Book',new_book_path , class: "nav-link"
+                =link_to 'Book',new_bookmark_path , class: "nav-link"
               li.nva-item
                 =link_to 'Log Out',logout_path, class: "nav-link", method: :delete 
             -else
