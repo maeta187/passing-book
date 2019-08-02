@@ -67,6 +67,9 @@ h2 {
   &:focus{
     width: 350px;
     border-color: #2ecc71;
+    background: none;
+    color: white;
+    
   }
 
   &::placeholder{
@@ -84,13 +87,9 @@ h2 {
   background-size: cover;
   background-color: #191919;
 
-  .users-new-container {
-    padding-top: 220px;
-
     .form-group {
       margin-bottom: 20px;
     }
-  }
 }
 
 .alert {
@@ -135,3 +134,50 @@ div.col-offset-12.col-md-12{
 // div .form-group {
 //   margin: 200px 0px 0px 0px; 
 // }
+// #new_bookmark{
+//   margin-left: 20px !important;
+// }
+
+
+.form{
+  background: #191919;
+  border: 0;
+  background: none;
+  margin: 10px auto;
+  text-align: left;
+  display: block;
+  border: 2px solid #3498db;
+  width: 300px;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+
+}
+
+.title-form {
+  height: 60px;
+  margin: 10px;
+  // margin-right: auto;
+  // width: 400px;
+}
+
+.description-form {
+  height: 215px;
+  margin: 10px;
+  // margin-right: auto;
+  // width: 400px;
+}
+
+input.btn-white.form-btn{
+  margin: 10px 420px 10px 10px !important;
+  margin-right: auto !important;
+}
+
+.image-form {
+  height: 289px;
+  margin-top: 10px;
+  margin-left: 18px;
+  pointer-events : none;
+  width: 300px;
+  
+}

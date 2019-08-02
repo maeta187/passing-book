@@ -18,4 +18,6 @@ class User < ApplicationRecord
   validates :name,
             length: { maximum: 15 }
 
+  has_many :bookmarks
+  has_many :urls
 end
