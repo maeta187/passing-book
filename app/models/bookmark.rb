@@ -5,6 +5,6 @@ class Bookmark < ApplicationRecord
   # validates :image, presence: true
 
   belongs_to :user
-  has_many :urls
-  accepts_nested_attributes_for :urls
+  has_many :urls, dependent: :destroy
+  accepts_nested_attributes_for :urls,  allow_destroy: true
 end

@@ -11,10 +11,13 @@
             div class="form-group"
               = f.text_area :title, class: 'title-form form', placeholder: "TITLE"
               / = f.text_area :url, class: 'form-control'
-            = f.fields_for :urls do |u|
+            = f.nested_fields_for :urls, wrapper_tag: :u do |u|
               = u.text_field :url, class: 'title-form form', placeholder: "URL"
-
+              = u.text_field :url, class: 'title-form form', placeholder: "URL"
+              = u.text_field :url, class: 'title-form form', placeholder: "URL"
+              u= u.remove_nested_fields_link 'Delete', class: 'btn btn-danger', role: 'button'
               = f.text_area :description, class: 'description-form form', placeholder: "DESCRIPTION"
-            / = f.text_area :image, class: 'image-form form'
+                / = f.text_area :image, class: 'image-form form'
             - if logged_in?
+              = f.add_nested_fields_link :url, 'Add new', class: 'btn btn-primary', role: 'button'
               = f.submit 'Save', class: 'btn-white form-btn'

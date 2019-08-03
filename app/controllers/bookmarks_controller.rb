@@ -1,7 +1,8 @@
 class BookmarksController < ApplicationController
 
   def index
-    @bookmarks = Bookmark.all.includes(:url_users)
+    @bookmarks = Bookmark.all
+    # .includes(:url_users)
   end
 
   def new
@@ -11,7 +12,6 @@ class BookmarksController < ApplicationController
 
   def create
     @bookmark = current_user.bookmarks.new(bookmark_params)
-    # logger.debug @bookmark.errors.inspect 
     # binding.pry@b
     # byebug
     if @bookmark.save

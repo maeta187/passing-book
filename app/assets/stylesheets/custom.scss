@@ -181,3 +181,34 @@ input.btn-white.form-btn{
   width: 300px;
   
 }
+
+body{
+  background-color:#191919;
+}
+
+.bookmark-index-wrapper {
+  padding-top: 100px;
+  background-color:#191919;
+  
+  // columns: 3;
+  // column-count: 3;
+  .bookmark-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    
+    .bookmark-author {
+      padding-right: 20px;
+      padding-left: 20px;
+
+    }
+  }
+}
+
+.bookmark-text {
+  padding-right: 20px;
+  padding-left: 20px;
+}

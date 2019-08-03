@@ -12,6 +12,10 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
+  # def show
+  #   @topics = Topic.all(params[:id])
+  # end
   
   private
   def user_params
