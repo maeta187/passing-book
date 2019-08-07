@@ -20,4 +20,5 @@ class User < ApplicationRecord
 
   has_many :bookmarks
   has_many :urls
+  accepts_nested_attributes_for :urls, allow_destroy: true
 end

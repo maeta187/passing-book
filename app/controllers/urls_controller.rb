@@ -10,12 +10,16 @@ class UrlsController < ApplicationController
     if @bookmark.after_save
       redirect_to urls_path, success: '投稿に成功しました'
     else
-      flash.now[:danger] = "投稿に失敗しました"
       render :new
     end
+  end
+
+  def show
+    @link = Url.select("url")
   end
 
   private
   def url_params
     params.require(:url).permit(:user_id, :bookmark_id, :title)
   end
+end

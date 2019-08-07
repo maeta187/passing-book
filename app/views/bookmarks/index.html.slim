@@ -2,14 +2,25 @@
   .bookmark-index-wrapper
     .container
       .row
-        .col-md-3
+        .col-md-6
           .bookmark-index-single
             h2.bookmark-author
               = bookmark.user.name
             p.bookmark-text
               = bookmark.title
-            - bookmark.urls.each do |url|
-              herf.bookmark-text
-              = raw Rinku.auto_link(url.url, :all, 'target="_blank"')
             p.bookmark-text
-              = bookmark.description
+              = bookmark.description 
+            - bookmark.urls.each do |url|
+              p.bookmark-text
+                = raw Rinku.auto_link(url.url, :all, 'target="_blank"')
+                button onclick="setName('#{url.url}')" 
+        .col-md-6
+            iframe#link height="100px" src="" width="300px" 
+javascript:
+   function setName( $src ) {
+   var $elementReference = document.getElementById( "link" );
+   
+   $elementReference.src = $src;
+   console.log($src);
+   }
+                  

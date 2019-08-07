@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'bookmarks/new'
   get 'urls/new'
+  get 'urls/show'
   get 'sessions/new'
   root 'pages#index'
   get 'pages/help'
@@ -11,5 +12,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :bookmarks
+  resources :urls
 
 end

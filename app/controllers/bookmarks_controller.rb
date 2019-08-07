@@ -12,7 +12,6 @@ class BookmarksController < ApplicationController
 
   def create
     @bookmark = current_user.bookmarks.new(bookmark_params)
-    # binding.pry@b
     # byebug
     if @bookmark.save
       redirect_to bookmarks_path, success: '投稿に成功しました'
