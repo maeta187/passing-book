@@ -14,10 +14,6 @@ class UrlsController < ApplicationController
     end
   end
 
-  def show
-    @link = Url.select("url")
-  end
-
   private
   def url_params
     params.require(:url).permit(:user_id, :bookmark_id, :title)

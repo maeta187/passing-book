@@ -3,7 +3,7 @@
     .row
       .col-offset-12.col-md-12.users-new-container
         h1.text-center.text-white
-          | Save URL
+          | Edit
     = form_for @bookmark do |f|
       .container
         .row
@@ -17,6 +17,8 @@
                 / URLの入力項目を動的に追加・削除
                 = uu.remove_nested_fields_link 'DELETE', class: 'btn btn-danger', role: 'button'
                 = uu.text_field :url, class: 'title-form form', placeholder: "URL"
+                / = uu.check_box :_destroy
+                / = uu.label :_destroy, "削除"
               = f.add_nested_fields_link :urls, 'ADD', class: 'btn btn-primary', role: 'button'
             - if logged_in?
-              = f.submit 'Save', class: 'btn-white form-btn'
+              = f.submit 'Update', class: 'btn-white form-btn'

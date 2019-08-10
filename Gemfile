@@ -36,6 +36,7 @@ gem 'slim-rails', '3.1.3'
 # gem 'bootstrap-sass'
 gem 'bootstrap'
 gem "jquery-rails"
+gem 'jquery-ui-rails'
 gem "carrierwave"
 gem 'rinku'
 gem 'nested_form_fields'

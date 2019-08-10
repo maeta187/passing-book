@@ -3,6 +3,11 @@ h2 {
   font-weight: 100;
 }
 
+body{
+  font-family: 'Montserrat';
+  background-color:#191919;
+}
+
 .text-white {
   color: white;
 }
@@ -33,7 +38,7 @@ h2 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #191919;
+  // background-color: #191919;
 }
 
 .top-jumbotron-container {
@@ -174,14 +179,9 @@ input.btn-white.form-btn{
 }
 
 
-
-body{
-  background-color:#191919;
-}
-
 .bookmark-index-wrapper {
   padding-top: 100px;
-  background-color:#191919;
+  // background-color:#191919;
   
   // columns: 2;
   // column-count: 2;

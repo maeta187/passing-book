@@ -12,8 +12,15 @@
               = bookmark.description 
             - bookmark.urls.each do |url|
               p.bookmark-text
+                / 登録したURLが自動的に外部リンクとなる
                 = raw Rinku.auto_link(url.url, :all, 'target="_blank"')
+                / ボタンを押すと、"button"に格納されたURLをJavascriptが取得、
+                / "#link"の"src"タグの中に入れてプレビューを表示
                 button onclick="setName('#{url.url}')" 
+            / 更新対象のIDを記述する    
+            =link_to 'EDIT', edit_bookmark_path(bookmark.id)
+            / - if !current_user?(user)
+            /   | | #{link_to "delete", bookmark, method: :delete, data: { confirm: "You sure?" }}
         .col-md-6
             iframe#link height="100px" src="" width="300px" 
 javascript:
