@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require popper
 //= require activestorage
 //= require turbolinks
 //= require nested_form_fields

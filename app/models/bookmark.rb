@@ -7,4 +7,5 @@ class Bookmark < ApplicationRecord
   belongs_to :user
   has_many :urls, dependent: :destroy
   accepts_nested_attributes_for :urls,  allow_destroy: true
+  has_many :bookshelves
 end

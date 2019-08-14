@@ -6,7 +6,7 @@
         h1.text-center.text-white
           | Log in
         = form_for :session, url: login_path do |f|
-          .form-group 
+          .form-group
             = f.label :email, class: "text-white"
             = f.text_field :email, class: "form-control" , placeholder: "Email"
           .form-group

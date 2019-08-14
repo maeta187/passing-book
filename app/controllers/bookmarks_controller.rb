@@ -1,5 +1,5 @@
 class BookmarksController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:post, :index, :edit, :update, :destroy]
   def index
     @bookmarks = Bookmark.all.includes(:user)
     # .includes(:url_users)
@@ -10,9 +10,15 @@ class BookmarksController < ApplicationController
     @bookmark.urls.build
   end
 
+  def save
+    @bookmark = Bookmark.new
+    @bookmark.urls.build
+    @bookmark = current_user.bookmarks.new(bookmark_params)
+    @bookmark.save
+  end
+
   def create
     @bookmark = current_user.bookmarks.new(bookmark_params)
-    # byebug
     if @bookmark.save
       redirect_to bookmarks_path, success: '投稿に成功しました'
     else

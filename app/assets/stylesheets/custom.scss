@@ -12,6 +12,10 @@ body{
   color: white;
 }
 
+h1.text-white{
+  color: #eeeaec !important;
+}
+
 .btn-white {
   border: 0;
   background: none;
@@ -33,13 +37,14 @@ body{
 .top-jumbotron-wrapper {
   width: 100vw;
   height: 100vh;
-  // background: image-url('sky.jpg');
+  background: image-url('book.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   // background-color: #191919;
 }
+
 
 .top-jumbotron-container {
   padding-top: 220px;
@@ -85,7 +90,7 @@ body{
 .users-new-wrapper {
   width: 100vw;
   height: 100vh;
-  // background-image: image-url('sky.jpg');
+  background: image-url('book.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -110,6 +115,14 @@ body{
   height: 50px;
 }
 
+@media screen and (max-width: 991px) {
+  .site-navbar-light {
+    background: #bd6856 !important;
+    top: 0;
+    position: relative;
+  }
+}
+
 .form-control{
   margin: 22px auto !important;
 }
@@ -118,6 +131,9 @@ body{
   margin: 100px 0px 0px 0px;
 }
 
+a.nav-link{
+  color: #eeeaec !important;
+}
 // .nav-link{
 //   padding-right: 10px; 
 //   padding-left: 10px; 
@@ -217,4 +233,9 @@ iframe {
   border: none;
   position: fixed;
   
+}
+
+button.far.fa-eye{
+  border: none;
+  outline: none
 }
