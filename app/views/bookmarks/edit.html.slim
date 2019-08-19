@@ -9,7 +9,7 @@
         .row
           .col-md-8.ml-auto
             div class="form-group"
-              = f.text_area :title, class: 'title-form form', placeholder: "TITLE"
+              = f.text_field :title, class: 'title-form form', placeholder: "TITLE"
               = f.text_area :description, class: 'description-form form', placeholder: "DESCRIPTION"
               / = f.text_area :url, class: 'form-control'
                   / = f.fields_for :urls do |u|

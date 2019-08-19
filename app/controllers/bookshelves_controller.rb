@@ -11,11 +11,8 @@ class BookshelvesController < ApplicationController
   end
 
   def save
-    unless current_user.nil?
-      @bookshelf = Bookshelf.new(user_id: current_user.id, url: params[:data])
-      # @bookshelf = Bookshelf.find_by(user_id: params[:user_id])
+      @bookshelf = Bookshelf.new(user_id: params[:user_id], url: params[:data])
       @bookshelf.save
-    end
   end
 
   def create

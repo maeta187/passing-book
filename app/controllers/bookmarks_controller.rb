@@ -38,14 +38,13 @@ class BookmarksController < ApplicationController
     else
       flash.now[:danger] = "更新に失敗しました"
       render :edit
-    end
+    end    
+  end
 
   def destroy
-    Bookmark.find(params[:id]).destroy
-    flash[:success] = "URL deleted"
-    redirect_to bookmarks_path
-  end
-    
+    @bookmark = Bookmark.find_by(id: params[:id])
+    @bookmark.destroy if @bookmark.present?
+    redirect_to bookmarks_path, warning: '投稿取り消しました'
   end
 
   private

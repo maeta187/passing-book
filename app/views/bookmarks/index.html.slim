@@ -12,15 +12,16 @@
               = bookmark.description 
             - bookmark.urls.each do |url|
               p.bookmark-text
-                / 登録したURLが自動的に外部リンクとなる
-                = raw Rinku.auto_link(url.url, :all, 'target="_blank"')
-                / ボタンを押すと、"button"に格納されたURLをJavascriptが取得、
                 / "#link"の"src"タグの中に入れてプレビューを表示
-                button.far.fa-eye onclick="setName('#{url.url}')" 
-            / 更新対象のIDを記述する
-            =link_to '', edit_bookmark_path(bookmark.id), class: "fas fa-edit"
-            / - if !current_user?(url.user_id)
-            /   | | #{link_to "delete", bookmark, method: :delete, data: { confirm: "You sure?" }}
+                = link_to(url.url, 'javascript:void(0);', onclick: "setName('#{url.url}');return false;")
+                / = raw Rinku.auto_link(url.url, :all, 'target="_blank"')
+                / ボタンを押すと、"button"に格納されたURLをJavascriptが取得、
+                / 登録したURLが自動的に外部リンクとなる
+                button.fas.fa-external-link-alt onclick="window.open('#{url.url}')"
+                / 更新(更新対象のIDを記述する)
+                =link_to '', edit_bookmark_path(bookmark.id), class: "fas fa-cog icons"
+                / 投稿削除
+                =link_to '', bookmark_path(id: bookmark.id), method: :delete, class: "fas fa-trash-alt icons"
         .col-md-6
             iframe#link height="100px" src="" width="300px" 
 javascript:
