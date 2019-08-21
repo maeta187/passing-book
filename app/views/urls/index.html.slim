@@ -1,0 +1,32 @@
+  .bookmark-index-wrapper
+    .container
+      .row
+        .col-md-12
+    .container
+      .row
+        .col-md-12   
+          .clip.text-right
+            textarea.text-right#bar rows="1" wrap="off" style="overflow: overlay;"
+              | javascript: (function () { var b = location.href, a = new XMLHttpRequest; a.open("POST", "http://localhost:3000/bookshelves/save"); a.onreadystatechange = function () { 4 == a.readyState && (204 != a.status ? alert("\u30ed\u30b0\u30a4\u30f3\u3057\u3066\u4e0b\u3055\u3044\u3002") : alert("\u4fdd\u5b58\u306b\u6210\u529f\u3057\u307e\u3057\u305f\u3002")) }; a.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); a.send("data=" + b + "&user_id=1") })();
+            br
+            button.btn.btn-secondary.clipboard-btn data-clipboard-action="copy" data-clipboard-target="#bar"
+              | 共有用のリンクをコピーする
+          h4 PC登録
+          ol
+            li ""を押してクリップボードへコピーする
+            li 何でも良いので、ブラウザでブックマークの登録を行う
+            li 登録したブックマークの編集画面を開く
+            li "URL"の項目に"1."でコピーしたものを貼り付ける
+            li タイトルを分かりやすいものに変更する　例:ブックマークツール
+            li 保存をする
+            li お好きなページでブックマークを開き登録したブックマークを押す
+            li アプリ内の"Bookshelf"を選択
+            li 開いていたページが保存されます
+            li アプリ何のブックマークに登録できます
+          h4 スマートフォン登録
+            
+
+
+
+
+                  

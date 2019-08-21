@@ -1,12 +1,21 @@
 - @bookmarks.each do |bookmark|
   .bookmark-index-wrapper
+    / .container
+    /   .row
+    /     .col-md-12
+    /       h1.text-center.text-white
+    /         | Bookmark
     .container
       .row
         .col-md-6
           .bookmark-index-single
-            h2.bookmark-author
+            h5.bookmark-author
               = bookmark.user.name
-            p.bookmark-text
+              / 更新(更新対象のIDを記述する)
+            =link_to '', edit_bookmark_path(bookmark.id), class: "fas fa-cog icons edit"
+              / 投稿削除
+            =link_to '', bookmark_path(id: bookmark.id), method: :delete, class: "fas fa-trash-alt icons delete"
+            h3.bookmark-text
               = bookmark.title
             p.bookmark-text
               = bookmark.description 
@@ -18,10 +27,6 @@
                 / ボタンを押すと、"button"に格納されたURLをJavascriptが取得、
                 / 登録したURLが自動的に外部リンクとなる
                 button.fas.fa-external-link-alt onclick="window.open('#{url.url}')"
-                / 更新(更新対象のIDを記述する)
-                =link_to '', edit_bookmark_path(bookmark.id), class: "fas fa-cog icons"
-                / 投稿削除
-                =link_to '', bookmark_path(id: bookmark.id), method: :delete, class: "fas fa-trash-alt icons"
         .col-md-6
             iframe#link height="100px" src="" width="300px" 
 javascript:

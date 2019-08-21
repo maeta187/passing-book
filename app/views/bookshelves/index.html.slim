@@ -6,25 +6,13 @@
           .bookmark-index-single
             p.bookmark-text
               = bookshelf.url
-            - @bookmarks.each do |bookmark|
-              = bookmark.title
 
-                / 登録したURLが自動的に外部リンクとなる
-/                 = raw Rinku.auto_link(url.url, :all, 'target="_blank"')
-/                 / ボタンを押すと、"button"に格納されたURLをJavascriptが取得、
-/                 / "#link"の"src"タグの中に入れてプレビューを表示
-/                 button.far.fa-eye onclick="setName('#{url.url}')" 
-/             / 更新対象のIDを記述する
-/             =link_to '', edit_bookmark_path(bookmark.id), class: "fas fa-edit"
-/             / - if !current_user?(url.user_id)
-/             /   | | #{link_to "delete", bookmark, method: :delete, data: { confirm: "You sure?" }}
-/         .col-md-6
-/             iframe#link height="100px" src="" width="300px" 
-/ javascript:
-/    function setName( $src ) {
-/    var $elementReference = document.getElementById( "link" );
-   
-/    $elementReference.src = $src;
-/    console.log($src);
+            = form_for @url do |f|
+              = f.select :bookmark_id, options_for_select(@bookmarks.map{|bm| ["#{bm.title}", bm.id]}, {class: 'form-control'}),:prompt => true
+              = f.hidden_field :url, :value => bookshelf.url
+              = f.submit 
+              / = bookmark.collection_select :title, Origin.all, :id, :prompt => true
+            / - @bookmarks.each do |bookmark|
+              = bookmark.title
 /    }
                   

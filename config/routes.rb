@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :bookmarks
   resources :urls
   resources :bookshelves
+  # resources :links
   
 
 end

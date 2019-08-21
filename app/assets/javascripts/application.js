@@ -17,4 +17,11 @@
 //= require nested_form_fields
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require clipboard
+$(document).ready(function () {
+
+  var clipboard = new Clipboard('.clipboard-btn');
+  console.log(clipboard);
+
+});
 //= require_tree .

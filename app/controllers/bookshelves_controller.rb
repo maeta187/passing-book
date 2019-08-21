@@ -3,8 +3,13 @@ class BookshelvesController < ApplicationController
   def index
     @bookshelves = Bookshelf.all.includes(:user)
     @bookmarks = Bookmark.all.includes(:user)
+    @url = Url.new
 
   end
+
+  # def show
+  #   @bookmarks = Bookmark.find(params[:id])
+  # end
 
   def new
     @bookshelf = Bookshelf.new

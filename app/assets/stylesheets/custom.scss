@@ -5,7 +5,7 @@ h2 {
 
 body{
   font-family: 'Montserrat';
-  background-color:#191919;
+  background-color:#e6c5a5;
 }
 
 .text-white {
@@ -25,7 +25,7 @@ h1.text-white{
   border: 2px solid #2ecc71;
   padding: 14px 40px;
   outline: none;
-  color: white;
+  color: #eeeaec;
   border-radius: 24px;
   transition: 0.25s;
 
@@ -37,7 +37,7 @@ h1.text-white{
 .top-jumbotron-wrapper {
   width: 100vw;
   height: 100vh;
-  background: image-url('book.jpg');
+  // background: image-url('book.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -58,44 +58,45 @@ h1.text-white{
   }
 }
 // サインイン
-.form-control {
-  height: 45px;
-  background: #191919;
-  text-align: center;
-  border: 0;
-  background: none;
-  display: block;
-  margin: 28px auto;
-  text-align: center;
-  border: 2px solid #3498db;
-  width: 250px;
-  outline: none;
-  color: white;
-  border-radius: 24px;
-  transition: 0.25s;
+// .form-control {
+//   height: 45px;
+//   background: #191919;
+//   text-align: center;
+//   border: 0;
+//   background: none;
+//   display: block;
+//   margin: 28px auto;
+//   text-align: center;
+//   border: 2px solid #3498db;
+//   width: 250px;
+//   outline: none;
+//   color: white;
+//   border-radius: 24px;
+//   transition: 0.25s;
   
-  &:focus{
-    width: 350px;
-    border-color: #2ecc71;
-    background: none;
-    color: white;
+//   &:focus{
+//     width: 350px;
+//     border-color: #2ecc71;
+//     background: none;
+//     outline: none;
+//     color: white;
     
-  }
+//   }
 
-  &::placeholder{
-    color: darkgray;
-  }
-}
+//   &::placeholder{
+//     color: #eeeaec;
+//   }
+// }
 
 .users-new-wrapper {
   width: 100vw;
   height: 100vh;
-  background: image-url('book.jpg');
+  // background: image-url('book.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #191919;
+  background-color:#e6c5a5;
 
     .form-group {
       margin-bottom: 20px;
@@ -115,25 +116,34 @@ h1.text-white{
   height: 50px;
 }
 
-@media screen and (max-width: 991px) {
-  .site-navbar-light {
-    background: #bd6856 !important;
-    top: 0;
-    position: relative;
-  }
-}
+// @media screen and (max-width: 991px) {
+//   .site-navbar-light {
+//     background: #bd6856 !important;
+//     top: 0;
+//     position: relative;
+//   }
+// }
 
-.form-control{
-  margin: 22px auto !important;
-}
+// .form-control{
+//   margin: 22px auto !important;
+// }
 
 .col-md-offset-4.col-md-4{
   margin: 100px 0px 0px 0px;
 }
 
+.navbar{
+  border-bottom:1px solid #000;
+}
+
 a.nav-link{
   color: #eeeaec !important;
 }
+
+.bg-light{
+  background-color:#e6c5a5 !important;
+}
+
 // .nav-link{
 //   padding-right: 10px; 
 //   padding-left: 10px; 
@@ -237,12 +247,64 @@ iframe {
 
 button.fas{
   border: none;
-  outline: none;
+  outline: none; 
 }
 
 .icons{
+  // margin-left: 200px !important;
   margin: 0px 7px;
   -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
   filter: grayscale(0%) brightness(0%) sepia(0%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
 
+.edit{
+  margin-left: 450px !important;
+  margin-bottom: 10px !important;
+}
+
+.delete{
+  margin-left: 450px !important;
+}
+
+
+// .login-page .card-login.card-plain .form-group.no-border .form-control,
+// .login-page .card-login.card-plain .input-group.no-border .form-control {
+//   background-color: rgba(255, 255, 255, 0.1);
+//   color: #FFFFFF;
+// }
+
+// .form-group.no-border.input-lg .form-control,
+// .input-group.no-border.input-lg .form-control {
+//   padding: 15px 19px;
+// }
+
+// .form-group.no-border .form-control,
+// .form-group.no-border .form-control+.input-group-text,
+// .input-group.no-border .form-control,
+// .input-group.no-border .form-control+.input-group-text {
+//   background-color: rgba(222, 222, 222, 0.3);
+//   border: medium none;
+// }
+
+// .form-control::-webkit-input-placeholder {
+//   color: #888888;
+//   opacity: 0.8;
+//   filter: alpha(opacity=80);
+// }
+
+.form-control {
+  background-color: rgba(222, 222, 222, 0.3);
+  border: 1px solid #E3E3E3;
+  border-radius: 30px;
+  color: #2c2c2c;
+  height: auto;
+  line-height: normal;
+  font-size: 0.8571em;
+  -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }

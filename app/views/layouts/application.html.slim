@@ -10,7 +10,7 @@ html
   body
     - flash.each do |key, value|
       div class=("alert alert-#{key}") role="alert" = value
-    nav.navbar.navbar-expand-lg.fixed-top.navbar-transparent.site-navbar-light color-on-scroll="400" 
+    nav.navbar.navbar-expand-xl.fixed-top.navbar-light.bg-light.shadow color-on-scroll="400" 
         button.navbar-toggler.navbar-toggler-right.collapsed[type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation"]
           span.navbar-toggler-icon
         = link_to root_path do

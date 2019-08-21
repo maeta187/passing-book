@@ -6,9 +6,9 @@ class UrlsController < ApplicationController
   end
 
   def create
-    @url = current_user.urls.new(url_params)
-    if @bookmark.after_save
-      redirect_to urls_path, success: '投稿に成功しました'
+    @url = Url.new(url_params)
+    if @url.save
+      redirect_to urls_path, success: '追加に成功しました'
     else
       render :new
     end
@@ -16,6 +16,6 @@ class UrlsController < ApplicationController
 
   private
   def url_params
-    params.require(:url).permit(:user_id, :bookmark_id, :title)
+    params.require(:url).permit(:bookmark_id, :url)
   end
 end
