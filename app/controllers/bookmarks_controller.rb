@@ -1,8 +1,8 @@
 class BookmarksController < ApplicationController
   before_action :logged_in_user, only: [:post, :index, :edit, :update, :destroy]
   def index
-    @bookmarks = Bookmark.all.includes(:user)
-    # .includes(:url_users)
+    # ログインしているユーザーのみの情報を取得
+    @bookmarks = current_user.bookmarks
   end
 
   def new
@@ -20,9 +20,9 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = current_user.bookmarks.new(bookmark_params)
     if @bookmark.save
-      redirect_to bookmarks_path, success: '投稿に成功しました'
+      redirect_to bookmarks_path, success: '登録に成功しました'
     else
-      flash.now[:danger] = "投稿に失敗しました"
+      flash.now[:danger] = "登録に失敗しました"
       render :new
     end
   end
@@ -44,7 +44,7 @@ class BookmarksController < ApplicationController
   def destroy
     @bookmark = Bookmark.find_by(id: params[:id])
     @bookmark.destroy if @bookmark.present?
-    redirect_to bookmarks_path, warning: '投稿取り消しました'
+    redirect_to bookmarks_path, warning: '登録を取り消しました'
   end
 
   private
@@ -52,10 +52,4 @@ class BookmarksController < ApplicationController
     params.require(:bookmark).permit(:description, :title, urls_attributes: [:url, :_destroy,:id])
   end
 
-  def logged_in_user
-    unless logged_in?
-      flash[:danger] = "Please log in."
-      redirect_to login_path
-    end
-  end
 end

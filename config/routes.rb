@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   root 'pages#index'
   get 'pages/help'
+  
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
   resources :bookmarks
   resources :urls
   resources :bookshelves
-  # resources :links
+  resources :links
   
 
 end

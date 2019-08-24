@@ -6,13 +6,8 @@
           .bookmark-index-single
             p.bookmark-text
               = bookshelf.url
-
             = form_for @url do |f|
               = f.select :bookmark_id, options_for_select(@bookmarks.map{|bm| ["#{bm.title}", bm.id]}, {class: 'form-control'}),:prompt => true
               = f.hidden_field :url, :value => bookshelf.url
-              = f.submit 
-              / = bookmark.collection_select :title, Origin.all, :id, :prompt => true
-            / - @bookmarks.each do |bookmark|
-              = bookmark.title
-/    }
-                  
+              = f.hidden_field :bookshelf_id, :value => bookshelf.id
+              = f.submit                   
