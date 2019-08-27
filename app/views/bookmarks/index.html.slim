@@ -1,34 +1,30 @@
-- @bookmarks.each do |bookmark|
-  .bookmark-index-wrapper
-    / .container
-    /   .row
-    /     .col-md-12
-    /       h1.text-center.text-white
-    /         | Bookmark
-    .container
-      .row
-        .col-md-6
-          .bookmark-index-single
-            h5.bookmark-author
-              = bookmark.user.name
-              / 更新(更新対象のIDを記述する)
-            =link_to '', edit_bookmark_path(bookmark.id), class: "fas fa-cog icons edit"
-              / 投稿削除
-            =link_to '', bookmark_path(id: bookmark.id), method: :delete, class: "fas fa-trash-alt icons delete"
-            h3.bookmark-text
-              = bookmark.title
-            p.bookmark-text
-              = bookmark.description 
-            - bookmark.urls.each do |url|
+
+.bookmark-index-wrapper
+  .container
+    .row
+      .col-md-6.position-fixed.offset-md-5 style="z-index:1000;"
+          iframe#link height="100px" src="" width="100%"
+      .col-md-6.mt-50
+        - @bookmarks.each do |bookmark|
+          .col-md-12.mb-5
+            .bookmark-index-single
+              h5.bookmark-author
+                = bookmark.user.name 
+                =link_to '', edit_bookmark_path(bookmark.id), class: "fas fa-cog icons edit"
+                =link_to '', bookmark_path(id: bookmark.id), method: :delete, class: "fas fa-trash-alt icons delete"
+              h3.bookmark-text
+                = bookmark.title
               p.bookmark-text
-                / "#link"の"src"タグの中に入れてプレビューを表示
-                = link_to(url.url, 'javascript:void(0);', onclick: "setName('#{url.url}');return false;")
-                / = raw Rinku.auto_link(url.url, :all, 'target="_blank"')
-                / ボタンを押すと、"button"に格納されたURLをJavascriptが取得、
-                / 登録したURLが自動的に外部リンクとなる
-                button.fas.fa-external-link-alt onclick="window.open('#{url.url}')"
-        .col-md-6
-            iframe#link height="100px" src="" width="300px" 
+                = bookmark.description 
+              - bookmark.urls.each do |url|
+                p.bookmark-text
+                  / "#link"の"src"タグの中に入れてプレビューを表示
+                  = link_to(url.url, 'javascript:void(0);', onclick: "setName('#{url.url}');return false;")
+                  / = raw Rinku.auto_link(url.url, :all, 'target="_blank"')
+                  / ボタンを押すと、"button"に格納されたURLをJavascriptが取得、
+                  / 登録したURLが自動的に外部リンクとなる
+                  button.fas.fa-external-link-alt onclick="window.open('#{url.url}')"
+      
 javascript:
    function setName( $src ) {
    var $elementReference = document.getElementById( "link" );
@@ -36,4 +32,14 @@ javascript:
    $elementReference.src = $src;
    console.log($src);
    }
+/ script
+/   | $(function(){
+/   | if(window.matchMedia("(max-width:500px)").matches){
+/   | $('.up').addClass('order-2');
+/   | $('.under').addClass('order-1');
+/   | }else{
+/   | $('.up').removeClass('order-2');
+/   | $('.under').removeClass('order-1');
+/   | }
+/   | })
                   

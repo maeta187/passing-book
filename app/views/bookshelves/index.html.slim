@@ -2,7 +2,7 @@
   .bookmark-index-wrapper
     .container
       .row
-        .col-md-6
+        .col-sm-12
           .bookmark-index-single
             p.bookmark-text
               = bookshelf.url
@@ -10,4 +10,5 @@
               = f.select :bookmark_id, options_for_select(@bookmarks.map{|bm| ["#{bm.title}", bm.id]}, {class: 'form-control'}),:prompt => true
               = f.hidden_field :url, :value => bookshelf.url
               = f.hidden_field :bookshelf_id, :value => bookshelf.id
-              = f.submit                   
+              = f.submit "ADD", class: 'btn btn-primary', role: 'button'
+              
