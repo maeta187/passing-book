@@ -20,9 +20,9 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = current_user.bookmarks.new(bookmark_params)
     if @bookmark.save
-      redirect_to bookmarks_path, success: '登録に成功しました'
+      redirect_to bookmarks_path, success: 'Success'
     else
-      flash.now[:danger] = "登録に失敗しました"
+      flash.now[:danger] = "Failure"
       render :new
     end
   end
@@ -34,9 +34,9 @@ class BookmarksController < ApplicationController
   def update
     @bookmark = Bookmark.find(params[:id])
     if @bookmark.update_attributes(bookmark_params)
-      redirect_to bookmarks_path, success: '更新に成功しました'
+      redirect_to bookmarks_path, success: 'Success'
     else
-      flash.now[:danger] = "更新に失敗しました"
+      flash.now[:danger] = "Failure"
       render :edit
     end    
   end
@@ -44,7 +44,7 @@ class BookmarksController < ApplicationController
   def destroy
     @bookmark = Bookmark.find_by(id: params[:id])
     @bookmark.destroy if @bookmark.present?
-    redirect_to bookmarks_path, warning: '登録を取り消しました'
+    redirect_to bookmarks_path, warning: 'Delete'
   end
 
   private

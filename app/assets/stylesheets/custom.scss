@@ -150,6 +150,10 @@ h1.text-white{
 //   }
 // }
 
+.btn-size{
+  padding: 11px 136px !important;
+}
+
 .top-jumbotron-wrapper {
   width: 100vw;
   height: 100vh;
@@ -281,11 +285,11 @@ div.col-offset-12.col-md-12{
   margin: 10px auto;
   text-align: left;
   display: block;
-  border: 2px solid #3498db;
+  border: 2px solid #888888;
   width: 300px;
   outline: none;
   color: white;
-  border-radius: 10px;
+  border-radius: 7px;
 
 }
 
@@ -541,6 +545,10 @@ margin-bottom: 10px !important;
   background-color: rgba(249, 99, 50, 0.8);
 }
 
+.centering{
+  padding-left: 440px;
+}
+
 @media screen and (max-width: 500px) {
   iframe {
     width: 100%;
@@ -549,4 +557,10 @@ margin-bottom: 10px !important;
   .mt-50{
     margin-top: 40vh;
   }
+  .z-1000{
+    z-index: 1000;
+  }
+  .centering{
+  padding-left: 75px;
+}
 }

@@ -2,9 +2,9 @@
 .bookmark-index-wrapper
   .container
     .row
-      .col-md-6.position-fixed.offset-md-5 style="z-index:1000;"
+      .col-md-6.position-fixed.offset-md-5#z-1000
           iframe#link height="100px" src="" width="100%"
-      .col-md-6.mt-50
+      .col-md-6#mt-50
         - @bookmarks.each do |bookmark|
           .col-md-12.mb-5
             .bookmark-index-single
@@ -28,10 +28,17 @@
 javascript:
    function setName( $src ) {
    var $elementReference = document.getElementById( "link" );
-   
    $elementReference.src = $src;
-   console.log($src);
+   var $elementmt50 = document.getElementById( "mt-50" );
+   var $elementz1000 = document.getElementById( "z-1000" );
+   $elementmt50.classList.add("mt-50");
+   $elementz1000.classList.add("z-1000");
    }
+/ javascript:
+/   const box = 'iframe#link height="100px" src="" width="100%"'
+/   document.getElementById("button").onclick = function() {
+/     window.insertAdjacentHTML('afterend', box);
+/    }
 / script
 /   | $(function(){
 /   | if(window.matchMedia("(max-width:500px)").matches){

@@ -7,7 +7,7 @@
             p.bookmark-text
               = bookshelf.url
             = form_for @url do |f|
-              = f.select :bookmark_id, options_for_select(@bookmarks.map{|bm| ["#{bm.title}", bm.id]}, {class: 'form-control'}),:prompt => true
+              = f.select :bookmark_id, options_for_select(@bookmarks.map{|bm| ["#{bm.title}", bm.id]}, {class: 'form-control'}),:prompt => 'SELECT TITLE'
               = f.hidden_field :url, :value => bookshelf.url
               = f.hidden_field :bookshelf_id, :value => bookshelf.id
               = f.submit "ADD", class: 'btn btn-primary', role: 'button'

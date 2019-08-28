@@ -1,12 +1,12 @@
   .bookmark-index-wrapper
     .container
       .row
-        .col-sm-12
-          / img src="../../../../QR_Code.png"
+        .col-sm-12.text-center
+           = image_tag "QR_Code_1566475155.png"
     .container
       .row
-        .col-sm-12   
-          .clip.text-right
+        .col-sm-12
+          .clip.text-left.mt-5
             textarea.text-right#bar rows="1" wrap="off" style="overflow: overlay;"
               | javascript: (function () { var b = location.href, a = new XMLHttpRequest; a.open("POST", "http://localhost:3000/bookshelves/save"); a.onreadystatechange = function () { 4 == a.readyState && (204 != a.status ? alert("\u30ed\u30b0\u30a4\u30f3\u3057\u3066\u4e0b\u3055\u3044\u3002") : alert("\u4fdd\u5b58\u306b\u6210\u529f\u3057\u307e\u3057\u305f\u3002")) }; a.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); a.send("data=" + b + "&user_id=#{current_user.id}") })();
             br

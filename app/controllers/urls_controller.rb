@@ -8,14 +8,14 @@ class UrlsController < ApplicationController
   def create
     @url = Url.new(url_params)
     if url_params[:bookmark_id].empty?
-      flash[:danger] = "ブックマークを選択して下さい"
+      flash[:danger] = "Please select bookmark."
       redirect_to bookshelves_path
     end
     if @url.save
       # bookshelf_params(ハッシュ)から:bookshelf_id(キー)を指定して、bookshelf_idのvalueを取り出す
       @bookshelf = Bookshelf.find(bookshelf_params[:bookshelf_id])
       @bookshelf.destroy if @bookshelf.present?
-      redirect_to bookmarks_path, success: 'ブックマークに追加しました'
+      redirect_to bookmarks_path, success: 'Add bookmark.'
     # else
     #   flash[:danger] = "ブックマークの追加に失敗しました"
     #   redirect_to bookshelves_path

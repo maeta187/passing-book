@@ -3,7 +3,7 @@
     .row
       .col-offset-12.col-md-12.users-new-container
         h1.text-center.text-white
-          | Save URL
+          / | Save URL
     = form_for @bookmark do |f|
       .container
         .row
@@ -19,4 +19,4 @@
                 = uu.text_field :url, class: 'title-form form', placeholder: "URL"
               = f.add_nested_fields_link :urls, 'ADD', class: 'btn btn-primary', role: 'button'
             - if logged_in?
-              = f.submit 'Save', class: 'btn btn-white form-btn'
+              = f.submit 'Save', class: 'btn btn-white form-btn btn-size'

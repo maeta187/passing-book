@@ -24,9 +24,9 @@ class BookshelvesController < ApplicationController
   def create
     @bookshelf = current_user.bookshelves.new(bookshelf_params)
     if @bookshelf.save
-      redirect_to new_bookmark_path, success: '登録に成功しました'
+      redirect_to new_bookmark_path, success: 'Success'
     else
-      flash.now[:danger] = "登録に失敗しました"
+      flash.now[:danger] = "Failure"
       render :new
     end
   end
