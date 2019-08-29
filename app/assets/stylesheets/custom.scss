@@ -566,6 +566,13 @@ margin-bottom: 10px !important;
 }
 
 @media screen and (max-width: 500px) {
+  .iframe-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 80%;
+  overflow:auto; 
+  -webkit-overflow-scrolling:touch;
+}
   .iframe-wrap iframe {    
     position:absolute;
     top:0;
