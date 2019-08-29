@@ -148,6 +148,7 @@ GEM
     orm_adapter (0.5.0)
     paranoia (2.4.2)
       activerecord (>= 4.0, < 6.1)
+    pg (1.1.4)
     popper_js (1.14.5)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -296,6 +297,7 @@ DEPENDENCIES
   mysql2 (>= 0.4.4, < 0.6.0)
   nested_form_fields
   paranoia
+  pg
   pry-byebug
   pry-doc
   pry-rails
@@ -319,4 +321,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
