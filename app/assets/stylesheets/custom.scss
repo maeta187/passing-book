@@ -544,9 +544,9 @@ margin-bottom: 10px !important;
   background-color: rgba(249, 99, 50, 0.8);
 }
 
-.centering{
-  padding-left: 440px;
-}
+// .centering{
+//   padding-left: 440px;
+// }
 // .iframe-wrap {
 //   position: relative;
 //   width: 100%;
@@ -578,6 +578,7 @@ margin-bottom: 10px !important;
     left:0;
     width: 85%;
     height: 500px;
+    margin: 10%;
     border:none;
     display:block;
   }
@@ -587,7 +588,4 @@ margin-bottom: 10px !important;
   .z-1000{
     z-index: 1000;
   }
-  .centering{
-  padding-left: 75px;
-}
 }
