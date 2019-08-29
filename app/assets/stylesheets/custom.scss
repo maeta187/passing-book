@@ -340,18 +340,17 @@ input.btn-white.form-btn{
   padding-left: 20px;
 }
 
-// iframe {
-//     width: 80%;
-//     height: 500px;
-// }
+.iframe-wrap iframe  {
+    width: 80%;
+    height: 500px;
+}
 
-// #link {
-//   margin-top: 10px;
-//   margin-left: 18px;
-//   border: none;
-//   position: fixed;
-  
-// }
+#link {
+  // margin-top: 10px;
+  // margin-left: 18px;
+  // position: fixed;
+  border: none;
+}
 
 button.fas{
   border: none;
@@ -548,27 +547,27 @@ margin-bottom: 10px !important;
 .centering{
   padding-left: 440px;
 }
-.iframe-wrap {
-  position: relative;
-  width: 100%;
-  padding-top: 80%;
-  overflow:auto; 
-  -webkit-overflow-scrolling:touch;
-}
-.iframe-wrap iframe {
-    position:absolute;
-    top:0;
-    left:0;
-    width: 80%;
-    height: 500px;
-    border:none;
-    display:block;
-}
+// .iframe-wrap {
+//   position: relative;
+//   width: 100%;
+//   padding-top: 80%;
+//   overflow:auto; 
+//   -webkit-overflow-scrolling:touch;
+// }
+// .iframe-wrap iframe {
+//     position:absolute;
+//     top:0;
+//     left:0;
+//     width: 80%;
+//     height: 500px;
+//     border:none;
+//     display:block;
+// }
 
 @media screen and (max-width: 500px) {
   .iframe-wrap {
   position: relative;
-  width: 80%;
+  width: 95%;
   padding-top: 80%;
   overflow:auto; 
   -webkit-overflow-scrolling:touch;
