@@ -567,18 +567,18 @@ margin-bottom: 10px !important;
 @media screen and (max-width: 500px) {
   .iframe-wrap {
   position: relative;
-  width: 90%;
+  width: 95%;
   padding-top: 80%;
   overflow:auto; 
   -webkit-overflow-scrolling:touch;
 }
-  iframe {    
+  .iframe-wrapi frame {    
     position:absolute;
     top:0;
     left:0;
-    width: 80%;
+    width: 88%;
     height: 500px;
-    margin-left: 30%;
+    margin-left: 20%;
     border:none;
     display:block;
   }
