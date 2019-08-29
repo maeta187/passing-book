@@ -549,10 +549,10 @@ margin-bottom: 10px !important;
   padding-left: 440px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   iframe {
-    width: 10%;
-    height: 100px;
+    width: 100%;
+    height: 300px;
   }
   .mt-50{
     margin-top: 40vh;
