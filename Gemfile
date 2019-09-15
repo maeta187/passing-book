@@ -43,7 +43,6 @@ gem 'nested_form_fields'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'rack-cors'
 gem 'paranoia'
-gem 'devise'
 gem 'clipboard-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -57,6 +56,7 @@ group :development, :test do
   gem 'pry-stack_explorer'
   gem 'html2slim'
   gem 'rails-i18n'
+  gem "nokogiri"
 end
 
 group :development do
